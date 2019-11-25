@@ -36,8 +36,8 @@ public class JobData {
         ArrayList<HashMap<String, String>> Values = new ArrayList<>();
         for (HashMap<String, String> job : allJobs) {
             for (String key : job.keySet()) {
-                String keyName = job.get(key);
-                if (keyName.contains(value)) {
+                String keys = job.get(key);
+                if (keys.contains(value)) {
                     Values.add(job);
                 }
             }
