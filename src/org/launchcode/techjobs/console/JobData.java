@@ -25,9 +25,27 @@ public class JobData {
      * Fetch list of all values from loaded data,
      * without duplicates, for a given column.
      *
+     *
      * @param field The column to retrieve values from
+     * @param searchField
      * @return List of all of the values of the given field
      */
+
+    public static ArrayList<HashMap<String, String>> findByValue(String value) {
+        loadData();
+        ArrayList<HashMap<String, String>> Values = new ArrayList<>();
+        for (HashMap<String, String> job : allJobs) {
+            for (String key : job.keySet()) {
+                String keyName = job.get(key);
+                if (keyName.contains(value)) {
+                    Values.add(job);
+                }
+            }
+        }
+        return Values;
+    };
+
+
     public static ArrayList<String> findAll(String field) {
 
         // load data, if not already loaded
