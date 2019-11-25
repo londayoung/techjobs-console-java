@@ -37,7 +37,7 @@ public class JobData {
         for (HashMap<String, String> job : allJobs) {
             for (String key : job.keySet()) {
                 String keys = job.get(key);
-                if (keys.contains(value)) {
+                if (keys.toLowerCase().contains(value.toLowerCase())) {
                     Values.add(job);
                 }
             }
