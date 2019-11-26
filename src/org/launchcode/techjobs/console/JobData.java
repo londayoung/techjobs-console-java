@@ -39,8 +39,7 @@ public class JobData {
                 String keys = job.get(key);
                 if (keys.toLowerCase().contains(value.toLowerCase())) {
                     Values.add(job);
-                }
-            }
+                } }
         }
         return Values;
     };
@@ -94,7 +93,7 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toLowerCase().contains(value.toLowerCase())) {
                 jobs.add(row);
             }
         }
