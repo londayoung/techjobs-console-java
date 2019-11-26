@@ -114,13 +114,14 @@ public class TechJobs {
         {
             System.out.println("no jobs found");
         }
+
         for (HashMap<String, String> job : someJobs) {
+            System.out.println("*****");
             for (String key : job.keySet()) {
                 String value = job.get(key);
                 System.out.println(key + ": " + value);
-
             }
-            System.out.println("*****");
+            System.out.println("***** \n");
         }
 
     }
